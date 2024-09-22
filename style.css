@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+.slider-container {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.slider-wrapper {
+  display: flex;
+  transition: transform 1s ease;
+  width: calc(100vw + 10px); /* Ensure the wrapper fits all images */
+}
+.slider-image {
+  height: 100%;
+  object-fit: cover;
+  margin-right: 10px; /* Gap between images */
+}
+/* Image sizes for default (large screens) */
+.image-1 {
+  width: 20vw; /* First image 20% */
+}
+.image-2 {
+  width: 60vw; /* Second image 60% */
+}
+.image-3 {
+  width: 20vw; /* Third image 20% */
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .image-1 {
+      width: 25vw; /* Adjust to 25% on medium devices */
+  }
+  .image-2 {
+      width: 50vw; /* Adjust to 50% on medium devices */
+  }
+  .image-3 {
+      width: 25vw; /* Adjust to 25% on medium devices */
+  }
+}
+@media (max-width: 768px) {
+  .image-1 {
+      width: 30vw; /* Adjust to 30% on smaller devices */
+  }
+  .image-2 {
+      width: 40vw; /* Adjust to 40% on smaller devices */
+  }
+  .image-3 {
+      width: 30vw; /* Adjust to 30% on smaller devices */
+  }
+}
+@media (max-width: 480px) {
+  .image-1 {
+      width: 35vw; /* 35% width on very small devices */
+  }
+  .image-2 {
+      width: 30vw; /* 30% width on very small devices */
+  }
+  .image-3 {
+      width: 35vw; /* 35% width on very small devices */
+  }
+}
